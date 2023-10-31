@@ -12,29 +12,29 @@
 
 ActiveRecord::Schema[7.0].define(version: 2023_10_30_211330) do
   create_table "don_nhap_hangs", force: :cascade do |t|
-    t.string "MaHD"
-    t.string "MaQL"
+    t.string "MaHD", null: false
+    t.string "MaQL", null: false
     t.date "NgayTao"
     t.text "GhiChu"
     t.integer "SoLuong"
     t.float "DonGia"
-    t.string "MaHH"
+    t.string "MaHH", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "hang_hoas", force: :cascade do |t|
-    t.string "MaHH"
+    t.string "MaHH", null: false
     t.string "TenHH"
     t.integer "SoLuong"
-    t.string "MaKho"
+    t.string "MaKho", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "khos", force: :cascade do |t|
-    t.string "MaKho"
-    t.string "MaQL"
+    t.string "MaKho", null: false
+    t.string "MaQL", null: false
     t.string "TenKho"
     t.integer "SLTonKho"
     t.datetime "created_at", null: false
@@ -42,18 +42,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_30_211330) do
   end
 
   create_table "nha_cung_caps", force: :cascade do |t|
-    t.string "MaNCC"
+    t.string "MaNCC", null: false
     t.string "TenNCC"
     t.string "SDT"
     t.string "Fax"
     t.text "DiaChi"
-    t.string "MaHD"
+    t.string "MaHD", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "quan_lies", force: :cascade do |t|
-    t.string "MaQL"
+    t.string "MaQL", null: false
     t.string "Ho"
     t.string "Ten"
     t.date "NgaySinh"

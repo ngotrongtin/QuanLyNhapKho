@@ -1,6 +1,6 @@
-<%= form_with(model: @hang_hoa, local: true) do |form| %>
+<%= form_with(model: @hang_hoa, local: true, class: 'mt-4') do |form| %>
   <% if @hang_hoa.errors.any? %>
-    <div id="error_explanation">
+    <div class="alert alert-danger">
       <h2><%= pluralize(@hang_hoa.errors.count, "error") %> prohibited this hang_hoa from being saved:</h2>
 
       <ul>
@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :MaHH %>
-    <%= form.text_field :MaHH %>
+  <div class="mb-3">
+    <%= form.label :MaHH, class: 'form-label' %>
+    <%= form.text_field :MaHH, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :TenHH %>
-    <%= form.text_field :TenHH %>
+  <div class="mb-3">
+    <%= form.label :TenHH, class: 'form-label' %>
+    <%= form.text_field :TenHH, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :SoLuong %>
-    <%= form.number_field :SoLuong %>
+  <div class="mb-3">
+    <%= form.label :SoLuong, class: 'form-label' %>
+    <%= form.number_field :SoLuong, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :MaKho %>
-    <%= form.text_field :MaKho %>
+  <div class="mb-3">
+    <%= form.label :MaKho, class: 'form-label' %>
+    <%= form.text_field :MaKho, class: 'form-control' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="mb-3">
+    <%= form.submit "Save", class: 'btn btn-primary' %>
   </div>
 <% end %>

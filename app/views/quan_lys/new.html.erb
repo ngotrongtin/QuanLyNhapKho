@@ -1,5 +1,9 @@
-<h1>New Quan Ly</h1>
+<div class="container mt-4">
+  <h1>New Quan Ly</h1>
 
-<%= render 'form', quan_ly: @quan_ly %>
+  <%= render 'form', quan_ly: @quan_ly %>
 
-<%= link_to 'Back', quan_lys_path %>
+  <div class="mt-3">
+    <%= link_to 'Back', quan_lys_path, class: 'btn btn-secondary' %>
+  </div>
+</div>

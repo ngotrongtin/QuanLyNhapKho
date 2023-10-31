@@ -34,7 +34,7 @@ class KhosController < ApplicationController
   end
 
   def destroy
-    @kho.destroy
+    @kho.destroy if @kho
     redirect_to khos_url, notice: 'Kho was successfully destroyed.'
   end
 

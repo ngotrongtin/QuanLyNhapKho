@@ -1,8 +1,47 @@
-<%= link_to 'Thêm Hàng Hóa mới', new_hang_hoa_path %>
-<%= link_to 'Thêm quan ly ', new_quan_ly_path %>
-<%= link_to 'Thêm kho', new_kho_path %>
-<div>
-    <%= link_to 'Xem hàng hóa', hang_hoas_path %>
-    <%= link_to 'Xem kho', khos_path %>
-    <%= link_to 'Xem quản lý', quan_lys_path %>
-</div>
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><%= link_to "QUẢN LÝ KHO HÀNG MEM'S DELI", root_path, class: 'nav-item', style: 'text-decoration: none; color: #007bff; font-weight: bold;' %>
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Danh Mục</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><%= link_to "Trang Chủ", root_path, class: 'nav-link'  %></a>
+          </li>
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Thêm
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#"><%= link_to 'Thêm Hàng Hóa', new_hang_hoa_path, class: 'nav-link'  %></a></li>
+              <li><a class="dropdown-item" href="#"><%= link_to 'Thêm Kho', new_kho_path, class: 'nav-link'  %></a></li>
+              <li><a class="dropdown-item" href="#"><%= link_to 'Thêm Quản Lý ', new_quan_ly_path, class: 'nav-link'  %></a></li>
+              <li><a class="dropdown-item" href="#"> <%= link_to 'Thêm Đơn Nhập Hàng', new_don_nhap_hang_path, class: 'nav-link' %></a></li>
+              <li><a class="dropdown-item" href="#"> <%= link_to 'Thêm Nhà Cung Cấp', new_nha_cung_cap_path, class: 'nav-link' %></a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Xem
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#"> <%= link_to 'Xem Hàng Hóa', hang_hoas_path, class: 'nav-link'  %></a></li>
+              <li><a class="dropdown-item" href="#"> <%= link_to 'Xem Kho', khos_path, class: 'nav-link'  %></a></li>
+              <li><a class="dropdown-item" href="#"> <%= link_to 'Xem Quản Lý', quan_lys_path, class: 'nav-link' %></a></li>
+              <li><a class="dropdown-item" href="#"> <%= link_to 'Xem Đơn Nhập Hàng', don_nhap_hangs_path, class: 'nav-link' %></a></li>
+              <li><a class="dropdown-item" href="#"> <%= link_to 'Xem Nhà Cung Cấp', nha_cung_caps_path, class: 'nav-link' %></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

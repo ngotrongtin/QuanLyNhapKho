@@ -1,39 +1,43 @@
-<p id="notice"><%= notice %></p>
+<div class="container mt-4">
+  <p id="notice" class="alert alert-info"><%= notice %></p>
 
-<p>
-  <strong>Mã HD:</strong>
-  <%= @don_nhap_hang.MaHD %>
-</p>
+  <p>
+    <strong>Mã HD:</strong>
+    <%= @don_nhap_hang.MaHD %>
+  </p>
 
-<p>
-  <strong>Mã QL:</strong>
-  <%= @don_nhap_hang.MaQL %>
-</p>
+  <p>
+    <strong>Mã QL:</strong>
+    <%= @don_nhap_hang.MaQL %>
+  </p>
 
-<p>
-  <strong>Ngày Tạo:</strong>
-  <%= @don_nhap_hang.NgayTao %>
-</p>
+  <p>
+    <strong>Ngày Tạo:</strong>
+    <%= @don_nhap_hang.NgayTao %>
+  </p>
 
-<p>
-  <strong>Ghi Chú:</strong>
-  <%= @don_nhap_hang.GhiChu %>
-</p>
+  <p>
+    <strong>Ghi Chú:</strong>
+    <%= @don_nhap_hang.GhiChu %>
+  </p>
 
-<p>
-  <strong>Số Lượng:</strong>
-  <%= @don_nhap_hang.SoLuong %>
-</p>
+  <p>
+    <strong>Số Lượng:</strong>
+    <%= @don_nhap_hang.SoLuong %>
+  </p>
 
-<p>
-  <strong>Đơn Giá:</strong>
-  <%= @don_nhap_hang.DonGia %>
-</p>
+  <p>
+    <strong>Đơn Giá:</strong>
+    <%= @don_nhap_hang.DonGia %>
+  </p>
 
-<p>
-  <strong>Mã HH:</strong>
-  <%= @don_nhap_hang.MaHH %>
-</p>
+  <p>
+    <strong>Mã HH:</strong>
+    <%= @don_nhap_hang.MaHH %>
+  </p>
 
-<%= link_to 'Sửa', edit_don_nhap_hang_path(@don_nhap_hang) %> |
-<%= link_to 'Quay lại', don_nhap_hangs_path %>
+  <div class="mt-3">
+    <%= link_to 'Sửa', edit_don_nhap_hang_path(@don_nhap_hang), class: 'btn btn-warning' %> |
+    <%= link_to 'Quay lại', don_nhap_hangs_path, class: 'btn btn-secondary' %>
+  </div>
+</div>

@@ -1,24 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div class="container mt-4">
+  <p id="notice" class="alert alert-info"><%= notice %></p>
 
-<p>
-  <strong>Mã HH:</strong>
-  <%= @hang_hoa.MaHH %>
-</p>
+  <p>
+    <strong>Mã HH:</strong>
+    <%= @hang_hoa.MaHH %>
+  </p>
 
-<p>
-  <strong>Tên HH:</strong>
-  <%= @hang_hoa.TenHH %>
-</p>
+  <p>
+    <strong>Tên HH:</strong>
+    <%= @hang_hoa.TenHH %>
+  </p>
 
-<p>
-  <strong>Số Lượng:</strong>
-  <%= @hang_hoa.SoLuong %>
-</p>
+  <p>
+    <strong>Số Lượng:</strong>
+    <%= @hang_hoa.SoLuong %>
+  </p>
 
-<p>
-  <strong>Mã Kho:</strong>
-  <%= @hang_hoa.MaKho %>
-</p>
+  <p>
+    <strong>Mã Kho:</strong>
+    <%= @hang_hoa.MaKho %>
+  </p>
 
-<%= link_to 'Sửa', edit_hang_hoa_path(@hang_hoa) %> |
-<%= link_to 'Quay lại', hang_hoas_path %>
+  <div class="mt-3">
+    <%= link_to 'Sửa', edit_hang_hoa_path(@hang_hoa), class: 'btn btn-warning' %> |
+    <%= link_to 'Quay lại', hang_hoas_path, class: 'btn btn-secondary' %>
+  </div>
+</div>

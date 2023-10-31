@@ -1,3 +1,43 @@
-<h1>Sửa thông tin Kho</h1>
-<%= render 'form' %>
-<%= link_to 'Quay lại', khos_path %>
+<div class="container mt-4">
+  <h1>Sửa thông tin Kho</h1>
+
+  <%= form_with(model: @kho, local: true, url: kho_path, class: 'mt-4') do |form| %>
+  <% if @kho.errors.any? %>
+    <div class="alert alert-danger">
+      <h2><%= pluralize(@kho.errors.count, "error") %> prohibited this kho from being saved:</h2>
+
+      <ul>
+        <% @kho.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :MaKho, class: 'form-label' %>
+    <%= form.text_field :MaKho, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :MaQL, class: 'form-label' %>
+    <%= form.text_field :MaQL, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :TenKho, class: 'form-label' %>
+    <%= form.text_field :TenKho, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :SLTonKho, class: 'form-label' %>
+    <%= form.number_field :SLTonKho, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.submit "Save", class: 'btn btn-primary' %>
+  </div>
+<% end %>
+
+
+  <%= link_to 'Quay lại', khos_path, class: 'btn'%>

@@ -1,6 +1,52 @@
-<h1>Edit Quan Ly</h1>
+<div class="container mt-4">
+  <h1>Edit Quan Ly</h1>
+<div class="container mt-4">
+  <%= form_with(model: @quan_ly, local: true, url: quan_ly_path) do |form| %>
+    <% if @quan_ly.errors.any? %>
+      <div id="error_explanation" class="alert alert-danger">
+        <h2><%= pluralize(quan_ly.errors.count, "error") %> prohibited this quan_ly from being saved:</h2>
 
-<%= render 'form', quan_ly: @quan_ly %>
+        <ul>
+          <% @quan_ly.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-<%= link_to 'Show', @quan_ly %> |
-<%= link_to 'Back', quan_lys_path %>
+    <div class="mb-3">
+      <%= form.label :MaQL, class: 'form-label' %>
+      <%= form.text_field :MaQL, class: 'form-control' %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :Ho, class: 'form-label' %>
+      <%= form.text_field :Ho, class: 'form-control' %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :Ten, class: 'form-label' %>
+      <%= form.text_field :Ten, class: 'form-control' %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :NgaySinh, class: 'form-label' %>
+      <%= form.date_field :NgaySinh, class: 'form-control' %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :SDT, class: 'form-label' %>
+      <%= form.text_field :SDT, class: 'form-control' %>
+    </div>
+
+    <div class="mt-3">
+      <%= form.submit 'Lưu', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
+
+  <div class="mt-3">
+    <%= link_to 'Show', @quan_ly, class: 'btn btn-info' %> |
+    <%= link_to 'Back', quan_lys_path, class: 'btn btn-secondary' %>
+  </div>
+</div>

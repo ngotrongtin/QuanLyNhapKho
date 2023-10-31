@@ -1,29 +1,33 @@
-<p id="notice"><%= notice %></p>
+<div class="container mt-4">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Ma QL:</strong>
-  <%= @quan_ly.MaQL %>
-</p>
+  <p>
+    <strong>Ma QL:</strong>
+    <%= @quan_ly.MaQL %>
+  </p>
 
-<p>
-  <strong>Ho:</strong>
-  <%= @quan_ly.Ho %>
-</p>
+  <p>
+    <strong>Ho:</strong>
+    <%= @quan_ly.Ho %>
+  </p>
 
-<p>
-  <strong>Ten:</strong>
-  <%= @quan_ly.Ten %>
-</p>
+  <p>
+    <strong>Ten:</strong>
+    <%= @quan_ly.Ten %>
+  </p>
 
-<p>
-  <strong>Ngay Sinh:</strong>
-  <%= @quan_ly.NgaySinh %>
-</p>
+  <p>
+    <strong>Ngay Sinh:</strong>
+    <%= @quan_ly.NgaySinh %>
+  </p>
 
-<p>
-  <strong>SDT:</strong>
-  <%= @quan_ly.SDT %>
-</p>
+  <p>
+    <strong>SDT:</strong>
+    <%= @quan_ly.SDT %>
+  </p>
 
-<%= link_to 'Edit', edit_quan_ly_path(@quan_ly) %> |
-<%= link_to 'Back', quan_lys_path %>
+  <div class="mt-3">
+    <%= link_to 'Edit', edit_quan_ly_path(@quan_ly), class: 'btn btn-warning btn-sm' %> |
+    <%= link_to 'Back', quan_lys_path, class: 'btn btn-secondary btn-sm' %>
+  </div>
+</div>

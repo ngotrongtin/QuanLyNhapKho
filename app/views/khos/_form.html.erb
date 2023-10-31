@@ -1,6 +1,6 @@
-<%= form_with(model: @kho, local: true,url: khos_path) do |form| %>
+<%= form_with(model: @kho, local: true, url: khos_path, class: 'mt-4') do |form| %>
   <% if @kho.errors.any? %>
-    <div id="error_explanation">
+    <div class="alert alert-danger">
       <h2><%= pluralize(@kho.errors.count, "error") %> prohibited this kho from being saved:</h2>
 
       <ul>
@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :MaKho %>
-    <%= form.text_field :MaKho %>
+  <div class="mb-3">
+    <%= form.label :MaKho, class: 'form-label' %>
+    <%= form.text_field :MaKho, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :MaQL %>
-    <%= form.text_field :MaQL %>
+  <div class="mb-3">
+    <%= form.label :MaQL, class: 'form-label' %>
+    <%= form.text_field :MaQL, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :TenKho %>
-    <%= form.text_field :TenKho %>
+  <div class="mb-3">
+    <%= form.label :TenKho, class: 'form-label' %>
+    <%= form.text_field :TenKho, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :SLTonKho %>
-    <%= form.number_field :SLTonKho %>
+  <div class="mb-3">
+    <%= form.label :SLTonKho, class: 'form-label' %>
+    <%= form.number_field :SLTonKho, class: 'form-control' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="mb-3">
+    <%= form.submit "Save", class: 'btn btn-primary' %>
   </div>
 <% end %>

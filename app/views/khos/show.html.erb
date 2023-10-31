@@ -1,24 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div class="container mt-4">
+  <p id="notice" class="alert alert-info"><%= notice %></p>
 
-<p>
-  <strong>Mã Kho:</strong>
-  <%= @kho.MaKho %>
-</p>
+  <p>
+    <strong>Mã Kho:</strong>
+    <%= @kho.MaKho %>
+  </p>
 
-<p>
-  <strong>Mã QL:</strong>
-  <%= @kho.MaQL %>
-</p>
+  <p>
+    <strong>Mã QL:</strong>
+    <%= @kho.MaQL %>
+  </p>
 
-<p>
-  <strong>Tên Kho:</strong>
-  <%= @kho.TenKho %>
-</p>
+  <p>
+    <strong>Tên Kho:</strong>
+    <%= @kho.TenKho %>
+  </p>
 
-<p>
-  <strong>Số Lượng Tồn Kho:</strong>
-  <%= @kho.SLTonKho %>
-</p>
+  <p>
+    <strong>Số Lượng Tồn Kho:</strong>
+    <%= @kho.SLTonKho %>
+  </p>
 
-<%= link_to 'Sửa', edit_kho_path(@kho) %> |
-<%= link_to 'Quay lại', khos_path %>
+  <div class="mt-3">
+    <%= link_to 'Sửa', edit_kho_path(@kho), class: 'btn btn-warning' %> |
+    <%= link_to 'Quay lại', khos_path, class: 'btn btn-secondary' %>
+  </div>
+</div>
