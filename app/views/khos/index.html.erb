@@ -1,0 +1,30 @@
+<h1>Danh sách Kho</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Mã Kho</th>
+      <th>Mã QL</th>
+      <th>Tên Kho</th>
+      <th>Số Lượng Tồn Kho</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @khos.each do |kho| %>
+      <tr>
+        <td><%= kho.MaKho %></td>
+        <td><%= kho.MaQL %></td>
+        <td><%= kho.TenKho %></td>
+        <td><%= kho.SLTonKho %></td>
+        <td><%= link_to 'Xem', kho %></td>
+        <td><%= link_to 'Sửa', edit_kho_path(kho) %></td>
+        <td><%= link_to 'Xóa', kho, method: :delete, data: { confirm: 'Bạn chắc chắn muốn xóa?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Thêm Kho mới', new_kho_path %>

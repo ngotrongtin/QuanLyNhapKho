@@ -1,0 +1,37 @@
+<%= form_with(model: @hang_hoa, local: true) do |form| %>
+  <% if @hang_hoa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hang_hoa.errors.count, "error") %> prohibited this hang_hoa from being saved:</h2>
+
+      <ul>
+        <% @hang_hoa.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :MaHH %>
+    <%= form.text_field :MaHH %>
+  </div>
+
+  <div class="field">
+    <%= form.label :TenHH %>
+    <%= form.text_field :TenHH %>
+  </div>
+
+  <div class="field">
+    <%= form.label :SoLuong %>
+    <%= form.number_field :SoLuong %>
+  </div>
+
+  <div class="field">
+    <%= form.label :MaKho %>
+    <%= form.text_field :MaKho %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

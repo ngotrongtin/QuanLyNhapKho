@@ -1,0 +1,34 @@
+<h1>Danh sách Nhà Cung Cấp</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Mã NCC</th>
+      <th>Tên NCC</th>
+      <th>Số Điện Thoại</th>
+      <th>Fax</th>
+      <th>Địa Chỉ</th>
+      <th>Mã HD</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nha_cung_caps.each do |nha_cung_cap| %>
+      <tr>
+        <td><%= nha_cung_cap.MaNCC %></td>
+        <td><%= nha_cung_cap.TenNCC %></td>
+        <td><%= nha_cung_cap.SDT %></td>
+        <td><%= nha_cung_cap.Fax %></td>
+        <td><%= nha_cung_cap.DiaChi %></td>
+        <td><%= nha_cung_cap.MaHD %></td>
+        <td><%= link_to 'Xem', nha_cung_cap %></td>
+        <td><%= link_to 'Sửa', edit_nha_cung_cap_path(nha_cung_cap) %></td>
+        <td><%= link_to 'Xóa', nha_cung_cap, method: :delete, data: { confirm: 'Bạn chắc chắn muốn xóa?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Thêm Nhà Cung Cấp mới', new_nha_cung_cap_path %>

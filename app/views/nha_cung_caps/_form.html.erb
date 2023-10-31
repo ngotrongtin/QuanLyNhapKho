@@ -1,0 +1,47 @@
+<%= form_with(model: @nha_cung_cap, local: true) do |form| %>
+  <% if @nha_cung_cap.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nha_cung_cap.errors.count, "error") %> prohibited this nha_cung_cap from being saved:</h2>
+
+      <ul>
+        <% @nha_cung_cap.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :MaNCC %>
+    <%= form.text_field :MaNCC %>
+  </div>
+
+  <div class="field">
+    <%= form.label :TenNCC %>
+    <%= form.text_field :TenNCC %>
+  </div>
+
+  <div class="field">
+    <%= form.label :SDT %>
+    <%= form.text_field :SDT %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Fax %>
+    <%= form.text_field :Fax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :DiaChi %>
+    <%= form.text_area :DiaChi %>
+  </div>
+
+  <div class="field">
+    <%= form.label :MaHD %>
+    <%= form.text_field :MaHD %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,42 @@
+<%= form_with(model: quan_ly, local: true, url: quan_lys_path) do |form| %>
+  <% if quan_ly.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(quan_ly.errors.count, "error") %> prohibited this quan_ly from being saved:</h2>
+
+      <ul>
+        <% quan_ly.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :MaQL %>
+    <%= form.text_field :MaQL %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Ho %>
+    <%= form.text_field :Ho %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Ten %>
+    <%= form.text_field :Ten %>
+  </div>
+
+  <div class="field">
+    <%= form.label :NgaySinh %>
+    <%= form.text_field :NgaySinh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :SDT %>
+    <%= form.text_field :SDT %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

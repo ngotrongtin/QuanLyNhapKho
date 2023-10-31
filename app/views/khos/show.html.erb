@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Mã Kho:</strong>
+  <%= @kho.MaKho %>
+</p>
+
+<p>
+  <strong>Mã QL:</strong>
+  <%= @kho.MaQL %>
+</p>
+
+<p>
+  <strong>Tên Kho:</strong>
+  <%= @kho.TenKho %>
+</p>
+
+<p>
+  <strong>Số Lượng Tồn Kho:</strong>
+  <%= @kho.SLTonKho %>
+</p>
+
+<%= link_to 'Sửa', edit_kho_path(@kho) %> |
+<%= link_to 'Quay lại', khos_path %>

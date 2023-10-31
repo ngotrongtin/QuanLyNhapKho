@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Mã NCC:</strong>
+  <%= @nha_cung_cap.MaNCC %>
+</p>
+
+<p>
+  <strong>Tên NCC:</strong>
+  <%= @nha_cung_cap.TenNCC %>
+</p>
+
+<p>
+  <strong>Số Điện Thoại:</strong>
+  <%= @nha_cung_cap.SDT %>
+</p>
+
+<p>
+  <strong>Fax:</strong>
+  <%= @nha_cung_cap.Fax %>
+</p>
+
+<p>
+  <strong>Địa Chỉ:</strong>
+  <%= @nha_cung_cap.DiaChi %>
+</p>
+
+<p>
+  <strong>Mã HD:</strong>
+  <%= @nha_cung_cap.MaHD %>
+</p>
+
+<%= link_to 'Sửa', edit_nha_cung_cap_path(@nha_cung_cap) %> |
+<%= link_to 'Quay lại', nha_cung_caps_path %>

@@ -1,0 +1,30 @@
+<h1>Danh sách Hàng Hóa</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Mã HH</th>
+      <th>Tên HH</th>
+      <th>Số Lượng</th>
+      <th>Mã Kho</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hang_hoas.each do |hang_hoa| %>
+      <tr>
+        <td><%= hang_hoa.MaHH %></td>
+        <td><%= hang_hoa.TenHH %></td>
+        <td><%= hang_hoa.SoLuong %></td>
+        <td><%= hang_hoa.MaKho %></td>
+        <td><%= link_to 'Xem', hang_hoa %></td>
+        <td><%= link_to 'Sửa', edit_hang_hoa_path(hang_hoa) %></td>
+        <td><%= button_to 'Xóa', hang_hoa, method: :delete, data: { confirm: 'Bạn chắc chắn muốn xóa?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

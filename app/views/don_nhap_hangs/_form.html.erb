@@ -1,0 +1,52 @@
+<%= form_with(model: @don_nhap_hang, local: true) do |form| %>
+  <% if @don_nhap_hang.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@don_nhap_hang.errors.count, "error") %> prohibited this don_nhap_hang from being saved:</h2>
+
+      <ul>
+        <% @don_nhap_hang.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :MaHD %>
+    <%= form.text_field :MaHD %>
+  </div>
+
+  <div class="field">
+    <%= form.label :MaQL %>
+    <%= form.text_field :MaQL %>
+  </div>
+
+  <div class="field">
+    <%= form.label :NgayTao %>
+    <%= form.date_field :NgayTao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :GhiChu %>
+    <%= form.text_area :GhiChu %>
+  </div>
+
+  <div class="field">
+    <%= form.label :SoLuong %>
+    <%= form.number_field :SoLuong %>
+  </div>
+
+  <div class="field">
+    <%= form.label :DonGia %>
+    <%= form.number_field :DonGia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :MaHH %>
+    <%= form.text_field :MaHH %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end

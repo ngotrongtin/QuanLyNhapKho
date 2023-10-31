@@ -1,0 +1,33 @@
+<h1>Quan Lys</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ma QL</th>
+      <th>Ho</th>
+      <th>Ten</th>
+      <th>Ngay Sinh</th>
+      <th>SDT</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quan_lies.each do |quan_ly| %>
+      <tr>
+        <td><%= quan_ly.MaQL %></td>
+        <td><%= quan_ly.Ho %></td>
+        <td><%= quan_ly.Ten %></td>
+        <td><%= quan_ly.NgaySinh %></td>
+        <td><%= quan_ly.SDT %></td>
+        <td><%= link_to 'Show', quan_ly %></td>
+        <td><%= link_to 'Edit', edit_quan_ly_path(quan_ly) %></td>
+        <td><%= link_to 'Destroy', quan_ly, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quan Ly', new_quan_ly_path %>
